@@ -14,7 +14,7 @@ const Navber = () => {
                 <NavLink to='/courses'>Courses</NavLink>
                 {/**login or lagout */}
                 <Link to='/login'>
-                   <button className="border-2 border-[#6674cc]  px-4 py-2 text-[#6674cc] rounded">Sign up</button>
+                   <button className="border-2 border-[#6674cc]  px-4 py-2 text-[#6674cc] rounded">SignIn | SignUp</button>
                 </Link>
             </div>
         </div>

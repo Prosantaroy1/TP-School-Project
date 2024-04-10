@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import imgbanner from '../../../../public/images.jfif'
 
 const Banner = () => {
@@ -8,7 +9,9 @@ const Banner = () => {
                <span className='text-[60px] font-bold text-[#6674cc] space-y-3'>Top 1% software</span><br/>
                <span className='text-[60px] font-bold text-[#6674cc]'> developer</span><br/>
               <div className='pt-14'>
-                <button className="btn text-xl btn-active btn-primary">Explore Learning Program</button>
+                <Link to='/courses'>
+                  <button className="btn text-xl btn-active btn-primary">Explore Our Courses</button>
+                </Link>
               </div>
             </div>
             <div >
