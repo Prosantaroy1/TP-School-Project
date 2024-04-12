@@ -5,6 +5,7 @@ import Home from "../component/pages/Home/Home";
 import About from "../component/pages/About/About";
 import Courses from "../component/pages/Coursespage/Courses";
 
+
 const router = createBrowserRouter([
     {
       path: "/",
