@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../../provider/AuthProvider/AuthProvider";
 
 
 const Navber = () => {
+    //
+    const {user} =useContext(AuthContext);
 
     return (
         <div className="flex  shadow-xl   justify-between text-black items-center py-4 px-14 ">
@@ -13,9 +17,14 @@ const Navber = () => {
                 <NavLink to='/about'>About</NavLink>
                 <NavLink to='/courses'>Courses</NavLink>
                 {/**login or lagout */}
-                <Link to='/login'>
-                   <button className="border-2 border-[#6674cc]  px-4 py-2 text-[#6674cc] rounded">SignIn | SignUp</button>
-                </Link>
+                {
+                    user ? 
+                    <button className="border-2 border-[#6674cc]  px-4 py-2 text-[#6674cc] rounded">LogOut</button>
+                    :
+                    <Link to='/login'>
+                     <button className="border-2 border-[#6674cc]  px-4 py-2 text-[#6674cc] rounded">SignIn</button>
+                    </Link> 
+                }
             </div>
         </div>
     );
