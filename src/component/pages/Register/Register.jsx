@@ -1,10 +1,45 @@
+import { useContext } from "react";
+import { AuthContext } from "../../../provider/AuthProvider/AuthProvider";
 
 const Register = () => {
+    const {GoogleLogin, CreatedUser} = useContext(AuthContext);
+    //form register
+    const handleRegister=(e)=>{
+        e.preventDefault();
+        const from=e.target;
+        const name=from.name.value;
+        const photo= from.photo.value;
+        const email= from.email.value;
+        const password= from.password.value;
+        //test
+        console.log(name, photo, email, password);
+        CreatedUser(email, password)
+        .then(result=>{
+            const user= result.user;
+            console.log(user);
+            from.reset('')
+        })
+        .catch(error=>{
+            console.log(error);
+        })
+    }
+    //google register
+    const handleGoogleLogin=()=>{
+        GoogleLogin()
+        .then(result=>{
+            const user = result.user;
+            console.log(user);
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+    }
+
     return (
-        <div>
+        <div className="pt-3 pb-3">
             <div className="hero min-h-screen bg-base-200">
                  <div className="card shrink-0 md:w-2/4 sm:w-full shadow-2xl bg-base-100">
-                   <form className="card-body">
+                   <form onSubmit={handleRegister} className="card-body">
                      <div className="form-control">
                        <label className="label">
                          <span className="label-text">Full Name</span>
@@ -34,7 +69,7 @@ const Register = () => {
                      </div>
                      <h4 className="text-center text-xl">OR</h4>
                      <div className="flex gap-5 justify-center items-center">
-                          <button className="btn btn-outline btn-primary">Google Login</button>
+                          <button onClick={handleGoogleLogin} className="btn btn-outline btn-primary">Google Login</button>
                           <button className="btn btn-outline btn-secondary">GitHub Login</button>
                      </div>
                    </form>

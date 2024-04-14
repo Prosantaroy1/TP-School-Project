@@ -5,7 +5,15 @@ import { AuthContext } from "../../../provider/AuthProvider/AuthProvider";
 
 const Navber = () => {
     //
-    const {user} =useContext(AuthContext);
+    const {user,logOut} =useContext(AuthContext);
+    //
+    const handleLogOut=()=>{
+        logOut()
+        .then()
+        .catch(error=>{
+            console.log(error)
+        })
+    }
 
     return (
         <div className="flex  shadow-xl   justify-between text-black items-center py-4 px-14 ">
@@ -18,12 +26,28 @@ const Navber = () => {
                 <NavLink to='/courses'>Courses</NavLink>
                 {/**login or lagout */}
                 {
-                    user ? 
-                    <button className="border-2 border-[#6674cc]  px-4 py-2 text-[#6674cc] rounded">LogOut</button>
-                    :
-                    <Link to='/login'>
-                     <button className="border-2 border-[#6674cc]  px-4 py-2 text-[#6674cc] rounded">SignIn</button>
-                    </Link> 
+                    user ?
+                    <div className="dropdown dropdown-end">
+                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                      <div className="w-10 rounded-full">
+                        <img  src={user.photoURL} />
+                      </div>
+                    </div>
+                    <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                      <li>
+                        <a className="justify-between">
+                          Profile
+                          <span className="badge">New</span>
+                        </a>
+                      </li>
+                      <li><a>Settings</a></li>
+                      <li><a  onClick={handleLogOut}>Logout</a></li>
+                    </ul>
+                  </div>:
+                  <Link to='/login'>
+                  <button className="border-2 border-[#6674cc]  px-4 py-2 text-[#6674cc] rounded">SignIn</button>
+                  </Link> 
+                  
                 }
             </div>
         </div>
