@@ -1,11 +1,15 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../provider/AuthProvider/AuthProvider";
 
 
 const Login = () => {
     //
     const { SignIn} = useContext(AuthContext);
+    //privet router
+    const navigate = useNavigate();
+    const location = useLocation();
+    //const from = location.state?.from?.pathname || '/';
     //
     const handlelogin= e =>{
         e.preventDefault();
@@ -16,7 +20,9 @@ const Login = () => {
         .then(result=>{
             const user=result.user;
             console.log('successful :', user);
+            navigate(location.state?.from?.pathname || '/', {replace: true})
             alert('login succssful');
+           
             from.reset('');
         })
         .catch(error=>{
