@@ -6,6 +6,7 @@ import About from "../component/pages/About/About";
 import Courses from "../component/pages/Coursespage/Courses";
 import Login from "../component/pages/Login/Login";
 import Register from "../component/pages/Register/Register";
+import CoursesDetails from "../component/pages/CoursesDetails/CoursesDetails";
 
 
 const router = createBrowserRouter([
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
         {
           path: '/register',
           element: <Register/>
+        },
+        {
+          path: '/details/:id',
+          element: <CoursesDetails/>,
+          loader: ()=> fetch('../../public/courses.json')
         }
 
     ]

@@ -1,7 +1,12 @@
 /* eslint-disable react/prop-types */
 
+import { Link } from "react-router-dom";
+
+
 const CoursesCard = ({course}) => {
-   const {title, price, img, rating} =course;
+   const {id,title, price, img, rating} =course;
+   //
+ 
     return (
         <div  data-aos="zoom-in">
             <div className="card w-96 bg-base-100 shadow-xl">
@@ -14,7 +19,9 @@ const CoursesCard = ({course}) => {
                  </div>
                  <div className="flex justify-between pt-2 items-center">
                    <button className="btn btn-warning">Add Course</button>
-                   <button className="btn btn-error">Details</button>
+                   <Link to={`/details/${id}`}>
+                      <button className="btn btn-error">Details</button>
+                   </Link>
                  </div>
               </div>
             </div>

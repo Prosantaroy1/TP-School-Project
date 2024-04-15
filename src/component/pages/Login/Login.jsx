@@ -16,7 +16,7 @@ const Login = () => {
         .then(result=>{
             const user=result.user;
             console.log('successful :', user);
-            alert('login succssful')
+            alert('login succssful');
             from.reset('');
         })
         .catch(error=>{
