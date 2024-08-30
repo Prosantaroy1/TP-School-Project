@@ -30,5 +30,29 @@
       "rating": 4.9,
       "description": "Master full-stack web development with HTML, CSS, JavaScript, Node.js, and more. Perfect for aspiring web developers.",
       "img": "./image/w.png.jfif"
+    },
+    {
+      "id": 5,
+      "title": "Java Programming Advanced Techniques",
+      "price": 5500,
+      "rating": 4.8,
+      "description": "Take your Java skills to the next level with advanced techniques and best practices. Ideal for intermediate Java developers.",
+      "img": "./image/j.png.jfif"
+    },
+    {
+      "id": 6,
+      "title": "Data Science and Machine Learning Masterclass",
+      "price": 6000,
+      "rating": 4.6,
+      "description": "Become a data scientist and machine learning expert with hands-on projects and real-world applications.",
+      "img": "./image/d.png.png"
+    },
+    {
+      "id": 7,
+      "title": "Web Development Bootcamp",
+      "price": 4500,
+      "rating": 4.9,
+      "description": "Master full-stack web development with HTML, CSS, JavaScript, Node.js, and more. Perfect for aspiring web developers.",
+      "img": "./image/w.png.jfif"
     }
   ]

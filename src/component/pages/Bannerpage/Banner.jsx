@@ -1,13 +1,12 @@
 import { Link } from 'react-router-dom';
-import imgbanner from '../../../../public/images.jfif'
+import imgbanner from '../../../assets/banner/banner.svg'
 
 const Banner = () => {
     return (
-        <div className='flex px-14 pt-20 gap-32 pb-3'>
-            <div className='bg-[#ffffff]' data-aos="fade-right">
-               <span className='text-[70px] font-bold text-[#000000]'>Learn & become the </span><br/>
-               <span className='text-[60px] font-bold text-[#6674cc] space-y-3'>Top 1% software</span><br/>
-               <span className='text-[60px] font-bold text-[#6674cc]'> developer</span><br/>
+        <div className='flex container mx-auto py-28  items-center pb-12'>
+            <div className='bg-[#ffffff] tracking-wider' data-aos="fade-right">
+               <span className='text-7xl font-bold  text-[#000000]'>Learn & become the </span><br/>
+               <span className='text-7xl font-bold text-[#6674cc] space-y-3'>Top 1% software developer</span>
               <div className='pt-14'>
                 <Link to='/courses'>
                   <button className="btn text-xl btn-active btn-primary">Explore Our Courses</button>
@@ -15,7 +14,7 @@ const Banner = () => {
               </div>
             </div>
             <div data-aos="fade-left">
-                <img className=" rounded-xl p-1 border-2 border-emerald-600 w-[420px]  h-[380px]" src={imgbanner} />
+                <img src={imgbanner} className='w-[650px]'/>
             </div>
         </div>
     );

@@ -12,9 +12,11 @@ const Courses = () => {
     },[]);
     console.log(coursesData);
     return (
-        <div className="px-16 py-10  mt-7">
-            <h3 className='text-center font-bold text-3xl text-black'>OUR TOP SOFTWARW COURSES</h3>
-            <div className="flex gap-7 pt-14 flex-wrap items-center">
+        <div className="mx-auto py-10 container mt-7">
+            <h3 className='text-center font-semibold text-4xl text-black'>
+                Most Trending Online Courses
+            </h3>
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 pt-12">
              {
                 coursesData.map((course, idx)=> <CoursesCard
                  key={idx}

@@ -4,8 +4,8 @@ import { TiSocialLinkedin,TiSocialTwitter } from "react-icons/ti";
 
 const Footer = () => {
     return (
-        <div>
-            <footer className="footer p-10 bg-[#151617] text-white"> 
+        <div className="bg-[#151617]">
+            <footer className="footer container mx-auto p-10  text-white"> 
                <div>
                   <p className="text-xl"><span className="text-3xl font-bold">TP SCHOOL</span>
                   <br/>Providing reliable tech since 2022 </p>

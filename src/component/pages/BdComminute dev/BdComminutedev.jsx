@@ -4,9 +4,9 @@ import { HiOutlineHeart,HiPaperClip } from "react-icons/hi";
 
 const BdComminutedev = () => {
     return (
-        <div className="py-4 bg-[#6674cc] mt-12">
+        <div className="py-16 bg-[#6674cc] mt-12">
             <h3 className="text-center font-bold pt-4 text-white text-2xl">Bangladesh Most Loved Coding Community</h3>
-            <div className="flex px-44 pt-8 pb-5 justify-between items-center">
+            <div className="flex  container mx-auto pt-8 pb-5 justify-between items-center">
                 <div className="flex text-xl font-bold flex-col items-center text-[#fff]">
                     <p className="flex gap-2 items-center"><PiUsersThreeBold className="text-2xl"/>300000+</p>
                     <p>HAPPAY LEARNERS</p>
