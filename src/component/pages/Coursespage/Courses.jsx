@@ -12,7 +12,7 @@ const Courses = () => {
     }, []);
     console.log(coursesData);
     return (
-        <div className="mx-auto py-10 container mt-7">
+        <div className="mx-auto md:px-0 px-4 py-10 container mt-7">
             {/* title course */}
             <div data-aos="fade-up">
                 <h3 className='text-center font-semibold text-4xl text-black' >

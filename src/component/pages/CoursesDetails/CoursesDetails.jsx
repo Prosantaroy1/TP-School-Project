@@ -15,7 +15,7 @@ const CoursesDetails = () => {
     return (
         <div className="mb-8">
             <div className="container mx-auto  py-28">
-                <div className="flex items-center justify-between">
+                <div className="flex md:flex-row flex-col-reverse items-center md:gap-0 gap-8  justify-between md:px-0 px-4">
                     {/* details title */}
                     <div>
                         <h3 className="text-4xl font-bold ">{details.title}<br />
@@ -47,8 +47,8 @@ const CoursesDetails = () => {
             {/* company logo sec */}
             <CompanySec />
             {/* question sec */}
-            <div className="container mx-auto pt-12">
-                <h3 className="text-center text-5xl font-bold">
+            <div className="container mx-auto pt-12 md:px-0 px-4">
+                <h3 className="text-center md:text-5xl text-3xl font-bold">
                     Frequently asked questions ?
                 </h3>
                 <div className="pt-7 flex flex-col gap-5">

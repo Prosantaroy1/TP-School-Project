@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../../provider/AuthProvider/AuthProvider";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
     const {GoogleLogin, CreatedUser} = useContext(AuthContext);
@@ -8,27 +9,31 @@ const Register = () => {
         e.preventDefault();
         const from=e.target;
         const name=from.name.value;
-        const photo= from.photo.value;
         const email= from.email.value;
         const password= from.password.value;
         //test
-        console.log(name, photo, email, password);
+        console.log(name, email, password);
         CreatedUser(email, password)
         .then(result=>{
             const user= result.user;
             console.log(user);
             from.reset('')
+            navigate('/')
         })
         .catch(error=>{
             console.log(error);
         })
     }
+    // navigate
+    const navigate= useNavigate();
     //google register
     const handleGoogleLogin=()=>{
         GoogleLogin()
         .then(result=>{
             const user = result.user;
-            console.log(user);
+            console.log(user)
+            navigate('/')
+
         })
         .catch(error=>{
             console.log(error)
@@ -51,12 +56,6 @@ const Register = () => {
                          <span className="label-text">Email</span>
                        </label>
                        <input type="email" name="email" placeholder="email" className="input input-bordered" required />
-                     </div>
-                     <div className="form-control">
-                       <label className="label">
-                         <span className="label-text">PhotoUrl</span>
-                       </label>
-                       <input type="text" name="photo" placeholder="photo Url" className="input input-bordered" required />
                      </div>
                      <div className="form-control">
                        <label className="label">

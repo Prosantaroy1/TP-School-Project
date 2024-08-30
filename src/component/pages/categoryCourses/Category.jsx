@@ -3,11 +3,11 @@
 
 const Category = () => {
     return (
-        <div className="pt-12 container mx-auto  py-6 mt-4">
-            <h3 className="text-center text-black text-4xl font-bold font-serif ">
+        <div className="pt-12 md:px-0 px-4 container mx-auto  py-6 mt-4">
+            <h3 className="text-center text-black md:text-4xl text-2xl font-bold font-serif ">
                 TOP IT CATEGORY COURSES
             </h3>
-            <div className="flex items-center gap-4 flex-wrap pt-8">
+            <div className="grid md:grid-cols-5 grid-cols-2 gap-5 items-center pt-8">
                 <div  data-aos="fade-right" className="card  shadow-xl">
                     <div className="card-body rounded-2xl hover:bg-lime-200 transform duration-200 hover:scale-110 bg-[#d6db91]  py-16">
                         <h2 className="text-center text-2xl font-bold">

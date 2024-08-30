@@ -12,14 +12,14 @@ import logo11 from '../../../assets/compnayImg/company11.png'
 
 const CompanySec = () => {
     return (
-        <div className="bg-slate-200 py-20">
+        <div className="bg-slate-200 py-20 md:px-0 px-4">
             <div className="container mx-auto">
                 <h3 className="text-center text-4xl">
                     Thousands of our students achieved their <span className="text-pink-500">dream job</span> at
                 </h3>
                 {/* company logo */}
-                <div className='pt-6'>
-                    <ul className='flex items-center gap-20 flex-wrap'>
+                <div className='pt-6 '>
+                    <ul className='grid md:grid-cols-6 grid-cols-3  items-center gap-20 '>
                         <li>
                             <img src={logo1} alt="" className='w-40 h-40'/>
                         </li>

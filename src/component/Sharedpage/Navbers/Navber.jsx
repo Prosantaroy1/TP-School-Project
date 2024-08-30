@@ -17,7 +17,7 @@ const Navber = () => {
 
   return (
     <div className="shadow">
-      <div className="flex container mx-auto  justify-between text-black items-center py-4 ">
+      <div className="flex md:px-0 px-4 container mx-auto  justify-between text-black items-center py-4 ">
         <h3 className="text-4xl font-bold ">
           TP <span className="font-bold text-yellow-400">SCHOOL</span>
         </h3>
