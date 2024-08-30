@@ -5,24 +5,27 @@ const Courses = () => {
     //data useState or useEffect
     const [coursesData, setCoursesData] = useState([]);
 
-    useEffect(()=>{
+    useEffect(() => {
         fetch('../../../../public/courses.json')
-        .then(res=> res.json())
-        .then(data=> setCoursesData(data))
-    },[]);
+            .then(res => res.json())
+            .then(data => setCoursesData(data))
+    }, []);
     console.log(coursesData);
     return (
         <div className="mx-auto py-10 container mt-7">
-            <h3 className='text-center font-semibold text-4xl text-black'>
-                Most Trending Online Courses
-            </h3>
+            {/* title course */}
+            <div data-aos="fade-up">
+                <h3 className='text-center font-semibold text-4xl text-black' >
+                    Most Trending Online Courses
+                </h3>
+            </div>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 pt-12">
-             {
-                coursesData.map((course, idx)=> <CoursesCard
-                 key={idx}
-                 course={course}
-                ></CoursesCard>)
-             }
+                {
+                    coursesData.map((course, idx) => <CoursesCard
+                        key={idx}
+                        course={course}
+                    ></CoursesCard>)
+                }
             </div>
         </div>
     );

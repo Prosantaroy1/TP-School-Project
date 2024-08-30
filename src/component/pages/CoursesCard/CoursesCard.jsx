@@ -9,7 +9,7 @@ const CoursesCard = ({course}) => {
  
     return (
         <div  data-aos="zoom-in">
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card w-full bg-base-100 shadow-xl">
               <figure><img className="w-full h-[250px]" src={img} alt="Shoes" /></figure>
               <div className="card-body bg-lime-300">
                  <h2 className="text-xl font-bold">{title}</h2>
