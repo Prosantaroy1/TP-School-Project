@@ -8,6 +8,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Category from "../categoryCourses/Category";
 import FeedbackStu from "../FeedbackStudent/FeedbackStu";
+import SubscribeSec from "../Subscribe Sec/SubscribeSec";
 
 const Home = () => {
     //aos 
@@ -22,6 +23,7 @@ const Home = () => {
             <Courses/>
             <DiscountSection/>
             <FeedbackStu/>
+            <SubscribeSec/>
         </div>
     );
 };

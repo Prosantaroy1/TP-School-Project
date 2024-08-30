@@ -18,7 +18,7 @@ const CoursesCard = ({course}) => {
                     <p className="text-[16px] font-semibold">Rating: {rating}</p>
                  </div>
                  <div className="flex justify-between pt-2 items-center">
-                   <button className="btn btn-warning">Add Course</button>
+                   <button className="btn text-2xl btn-warning">Enroll</button>
                    <Link to={`/details/${id}`}>
                       <button className="btn btn-error">Details</button>
                    </Link>

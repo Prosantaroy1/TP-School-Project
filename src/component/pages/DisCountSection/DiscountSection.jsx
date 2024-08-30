@@ -9,6 +9,7 @@ const DiscountSection = () => {
                 <span className="font-bold text-[#24f409cc]"> TP538851</span> 
             </h4>
         </div>
+      
     );
 };
 
