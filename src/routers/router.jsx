@@ -7,7 +7,7 @@ import Courses from "../component/pages/Coursespage/Courses";
 import Login from "../component/pages/Login/Login";
 import Register from "../component/pages/Register/Register";
 import CoursesDetails from "../component/pages/CoursesDetails/CoursesDetails";
-import PrivetRouter from "./PrivetRouter";
+
 
 
 const router = createBrowserRouter([
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
         },
         {
           path: '/details/:id',
-          element: <PrivetRouter><CoursesDetails/></PrivetRouter>,
+          element: <CoursesDetails/>,
           loader: ()=> fetch('../../public/courses.json')
         }
 

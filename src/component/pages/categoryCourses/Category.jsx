@@ -39,7 +39,7 @@ const Category = () => {
                 <div data-aos="fade-left" className="card shadow-xl">
                     <div className="card-body rounded-2xl hover:bg-lime-200 transform duration-200 hover:scale-110 bg-[#d6db91]  py-16">
                         <h2 className="text-center text-2xl font-bold">
-                            Web Development
+                            DSA & CV Make
                         </h2>
                     </div>
                 </div>
