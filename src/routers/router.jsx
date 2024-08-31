@@ -40,7 +40,7 @@ const router = createBrowserRouter([
         {
           path: '/details/:id',
           element: <CoursesDetails/>,
-          loader: ()=> fetch('../../public/courses.json')
+          loader: ()=> fetch('courses.json')
         }
 
     ]
