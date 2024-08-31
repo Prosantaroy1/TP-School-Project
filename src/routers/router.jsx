@@ -7,6 +7,7 @@ import Login from "../component/pages/Login/Login";
 import Register from "../component/pages/Register/Register";
 import CoursesDetails from "../component/pages/CoursesDetails/CoursesDetails";
 import CourseMain from "../component/pages/CourseMain/CourseMain";
+import Payment from "../component/paymanet/Payment";
 
 
 
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
 
     ]
     },
+    {
+      path: '/payment',
+      element: <Payment/>
+    }
   ]);
 
 export default router; 

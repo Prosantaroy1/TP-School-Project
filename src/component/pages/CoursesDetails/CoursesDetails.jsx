@@ -1,6 +1,6 @@
 import { BiSolidUserDetail } from "react-icons/bi";
 import { FaUserFriends, FaVideo } from "react-icons/fa";
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 // 
 import detailsImg from '../../../assets/banner/banner.svg'
 import CompanySec from "../Company Sec/CompanySec";
@@ -34,7 +34,9 @@ const CoursesDetails = () => {
                         </ul>
                         {/* btn */}
                         <div className="pt-7">
+                            <Link to='/payment'>
                             <button className="btn  btn-active text-2xl btn-secondary">Enroll Now</button>
+                            </Link>
                         </div>
                     </div>
                     {/* details img */}

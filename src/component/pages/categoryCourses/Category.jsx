@@ -3,7 +3,7 @@
 
 const Category = () => {
     return (
-        <div className="pt-12 md:px-0 px-4 container mx-auto  py-6 mt-4">
+        <div className="pt-12 overflow-x-hidden md:px-0 px-4 container mx-auto  py-6 mt-4">
             <h3 className="text-center text-black md:text-4xl text-2xl font-bold font-serif ">
                 TOP IT CATEGORY COURSES
             </h3>
