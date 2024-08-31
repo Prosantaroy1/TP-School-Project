@@ -24,7 +24,7 @@ const Payment = () => {
                     <Link>Payment</Link>
                 </div>
                 {/* payment card */}
-                <div className="bg-white w-1/2 mt-5 px-5 shadow-lg py-5 text-black">
+                <div className="bg-white md:w-1/2 w-full mt-5 px-5 shadow-lg py-5 text-black">
                     <h3 className="text-4xl font-semibold">Payment Details</h3>
                     {/* input filed */}
                     <div className="pt-4 flex flex-col gap-5">

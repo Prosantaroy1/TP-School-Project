@@ -32,7 +32,7 @@ const Login = () => {
 
     return (
         <div>
-           <div className="hero min-h-screen bg-base-200">
+           <div className="hero  min-h-screen bg-base-200">
                  <div className="card shrink-0 md:w-2/4 sm:w-full shadow-2xl bg-base-100">
                    <form onSubmit={handlelogin} className="card-body">
                      <div className="form-control">
