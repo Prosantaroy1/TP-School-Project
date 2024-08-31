@@ -21,7 +21,7 @@ const FeedbackStu = () => {
         <div className='bg-[#eeebcf] pt-8 mb-12'>
             <div className="container mx-auto">
                 {/* title */}
-                <h3 className="text-center font-semibold text-6xl">Student <span className='text-cyan-400'>Feedback</span></h3>
+                <h3 className="text-center font-semibold text-2xl md:text-6xl">Student <span className='text-cyan-400'>Feedback</span></h3>
                 {/* card */}
                 <div className='pt-12 pb-6'>
                     <Swiper
